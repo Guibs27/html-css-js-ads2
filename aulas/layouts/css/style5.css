@@ -1,18 +1,22 @@
 * {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
+}
+
+@media screen and (max-width: 480px) {
+  .secao {
+    flex-direction: column;
+  }
 }
 
 body {
   background-color: #fcffdc;
   max-width: 1080px;
   margin: auto;
-  width: 100%; 
+  width: 100%;
 }
 
 #header {
-  width: 100%;
   height: 80px;
   background-color: #0e330e;
   display: flex;
@@ -20,8 +24,12 @@ body {
   padding: 15px;
 }
 
+#footer {
+  height: 250px;
+  background-color: #0e330e;
+}
+
 .secao {
-  width: 100%;
   height: 400px;
   background-color: #90a955;
   display: flex;
@@ -41,6 +49,14 @@ body {
   background-color: #31572c;
   border-radius: 10px;
   margin: 10px;
+}
+
+.nav {
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #ecf39e;
+  margin: auto;
 }
 
 .retanG {
@@ -71,10 +87,4 @@ body {
   height: 50px;
   border-radius: 100px;
   background-color: #ecf39e;
-}
-
-#footer {
-  width: 100%;
-  height: 250px;
-  background-color: #0e330e;
 }
