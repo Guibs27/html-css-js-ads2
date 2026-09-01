@@ -12,14 +12,14 @@
   width: 100%;
   height: inherit;
   margin: 0 auto;
-  padding: 10px;
+  padding: 20px;
   box-sizing: border-box;
 }
 
 
 /* Header */
 body > header {
-  background-color: #031727;
+  background-color: #031727; /* Primária escura (header/footer) */
   height: 80px;
 }
 
@@ -43,6 +43,9 @@ header .wrapper {
   margin-left: 10px;
   font-size: 26px;
 }
+#logo h1 span {
+  color: #f6861e; /* Acento principal (links, hover, CTA) */
+}
 
 
 /* Navegação */
@@ -61,8 +64,8 @@ nav ul li a {
 }
 
 nav ul li a:hover,
-nav ul li a:active {
-  color: #F26122;
+nav ul li .active {
+  color: #f6861e;
 }
 
 
@@ -89,7 +92,8 @@ table a {
   text-decoration: none;
 }
 table a:hover {
-  color: #F26122;
+  color: #f6861e;
+  text-decoration: underline;
 }
 
 
