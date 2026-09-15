@@ -18,7 +18,7 @@
 
       <nav>
         <ul>
-          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="./index.html">Início</a></li>
           <li><a href="./bolsas.html">Bolsas</a></li>
           <li><a href="./cadastro.html" class="active">Cadastro</a></li>
         </ul>
@@ -27,8 +27,59 @@
   </header>
 
   <main>
-    <div class="wrapper">
-      <h1>Cadastre-se hoje.</h1>
+    <div class="wrapper"> <!-- "center" class -->
+      <form action="form">
+        <h1>Cadastre-se hoje</h1>
+
+        <fieldset>
+          <legend>Informações Pessoais:</legend>
+
+          <label for="nameUser">Nome:</label>
+          <input type="text" name="nameUser" id="nameUser" placeholder="Nome" required>
+
+          <label for="surnameUser">Sobrenome:</label>
+          <input type="text" name="surnameUser" id="surnameUser" placeholder="Sobrenome" required>
+
+          <label for="passwordUser">Senha:</label>
+          <input type="password" name="passwordUser" id="passwordUser" placeholder="Senha" required>
+        </fieldset>
+
+        <h3>Qual o seu perfil de investidor?</h3>
+        <div>
+          <input type="radio" name="perfilUser" id="perfilConservador" value="pC" required>
+          <label for="perfilConservador">Conservador</label>
+        </div>
+
+        <div>
+          <input type="radio" name="perfilUser" id="perfilModerado" value="pM" required>
+          <label for="perfilModerado">Moderado</label>
+        </div>
+
+        <div>
+          <input type="radio" name="perfilUser" id="perfilAgressivo" value="pA" required>
+          <label for="perfilAgressivo">Agressivo</label>
+        </div>
+
+        <h3>Quais são suas preferências de investimento?</h3>
+        <div>
+          <input type="checkbox" name="prefUser" id="prefAcoes" value="ac">
+          <label for="prefAcoes">Ações</label>
+        </div>
+        <div>
+          <input type="checkbox" name="prefUser" id="prefFundos" value="fu">
+          <label for="prefFundos">Fundos</label>
+        </div>
+        <div>
+          <input type="checkbox" name="prefUser" id="prefRendaFixa" value="rf">
+          <label for="prefRendaFixa">Renda Fixa</label>
+        </div>
+        <div>
+          <input type="checkbox" name="prefUser" id="prefCriptomoedas" value="cm">
+          <label for="prefCriptomoedas">Criptomoedas</label>
+        </div>
+
+        <input type="submit" value="Cadastrar">
+      </form>
     </div>
   </main>
 
