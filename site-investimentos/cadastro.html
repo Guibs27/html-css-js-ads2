@@ -12,7 +12,7 @@
   <header>
     <div class="wrapper">
       <div id="logo">
-        <img src="img/vecteezy_foreign-investment-vector-icon-design_16421645.svg" alt="Logo IF Investments">
+        <img src="img/vecteezy_foreign-investment-vector-icon-design_16421645.svg" alt="Logo QuantIF">
         <h1>Quant<span>IF</span></h1>
       </div>
 
@@ -20,7 +20,7 @@
         <ul>
           <li><a href="./index.html">Início</a></li>
           <li><a href="./bolsas.html">Bolsas</a></li>
-          <li><a href="./cadastro.html" class="active">Cadastro</a></li>
+          <li><a href="./cadastro.html" class="signup-button active">Cadastre-se</a></li>
         </ul>
       </nav>
     </div>
@@ -33,8 +33,7 @@
 
         <fieldset>
           <legend>Informações Pessoais</legend>
-
-          <div class="field-group">
+          <div class="input-row">
             <label>
               Nome
               <input type="text" name="nameUser" placeholder="Nome" required>
@@ -44,7 +43,21 @@
               <input type="text" name="surnameUser" placeholder="Sobrenome" required>
             </label>
           </div>
+          
+          <div class="input-row">
+            <label>
+              CPF
+              <input type="text" name="cpfUser" placeholder="CPF" required>
+            </label>
+            <label>
+              Telefone
+              <input type="text" name="phoneUser" placeholder="Telefone" required>
+            </label>
+          </div>
+        </fieldset>
 
+        <fieldset>
+          <legend>Dados de Acesso</legend>
           <label>
             E-mail
             <input type="email" name="emailUser" placeholder="E-mail" required>
@@ -57,6 +70,40 @@
         </fieldset>
 
         <fieldset>
+          <legend>Endereço</legend>
+          <div class="input-group">
+            <label>
+              Rua
+              <input type="text" name="streetUser" placeholder="Rua" required>
+            </label>
+            <label>
+              Número
+              <input type="text" name="numberUser" placeholder="Número" required>
+            </label>
+
+            <div class="input-row">
+              <label>
+                Cidade
+                <input type="text" name="cityUser" placeholder="Cidade" required>
+              </label>
+              <label>
+                Estado
+                <input type="text" name="stateUser" placeholder="Estado" required>
+              </label>
+              <label>
+                País
+                <input type="text" name="countryUser" placeholder="País" required>
+              </label>
+            </div>
+
+            <label>
+              CEP
+              <input type="text" name="cepUser" placeholder="CEP" required>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset>
           <legend>Qual o seu perfil de investidor?</legend>
           <label class="inline-option">
             <input type="radio" name="perfilUser" value="pC" required> Conservador
@@ -66,6 +113,19 @@
           </label>
           <label class="inline-option">
             <input type="radio" name="perfilUser" value="pA" required> Agressivo
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Qual é o seu nível de experiência em investimentos?</legend>
+          <label class="inline-option">
+            <input type="radio" name="expUser" value="in" required> Iniciante
+          </label>
+          <label class="inline-option">
+            <input type="radio" name="expUser" value="inm" required> Intermediário
+          </label>
+          <label class="inline-option">
+            <input type="radio" name="expUser" value="av" required> Avançado
           </label>
         </fieldset>
 
@@ -85,7 +145,33 @@
           </label>
         </fieldset>
 
-        <input type="submit" value="Cadastrar">
+        <fieldset>
+          <legend>Qual é o seu objetivo de investimento?</legend>
+          <label class="inline-option">
+            <input type="radio" name="goalUser" value="ap" required> Aposentadoria
+          </label>
+          <label class="inline-option">
+            <input type="radio" name="goalUser" value="co" required> Compra de imóvel
+          </label>
+          <label class="inline-option">
+            <input type="radio" name="goalUser" value="ed" required> Educação
+          </label>
+          <label class="inline-option">
+            <input type="radio" name="goalUser" value="ou" required> Outros
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Termos e Condições</legend>
+          <label class="inline-option">
+            <input type="checkbox" name="termsUser" required> Eu li e aceito os termos e condições.
+          </label>
+          <label class="inline-option">
+            <input type="checkbox" name="privacyUser"> Eu aceito receber comunicações sobre produtos e serviços.
+          </label>
+        </fieldset>
+
+        <input type="submit" value="Criar conta">
       </form>
     </div>
   </main>

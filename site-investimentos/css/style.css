@@ -48,7 +48,6 @@ header .wrapper {
   color: #eb7426; /* Acento principal (links, hover, CTA) */
 }
 
-
 /* Navegation */
 nav ul {
   list-style-type: none;
@@ -71,6 +70,20 @@ nav ul li .active {
   transition: color 0.2s;
 }
 
+/* Nav button */
+.signup-button {
+  border: 1px solid #ffffff;
+  border-radius: 18px;
+  padding: 8px 18px;
+}
+
+.signup-button:hover, 
+.signup-button.active {
+  background-color: #eb7426;
+  border-color: #eb7426;
+  color: #ffffff;
+  transition: background-color 0.2s;
+}
 
 /* Main */
 main {
@@ -121,7 +134,6 @@ form {
 
 form span {
   font-size: 28px;
-
 }
 
 fieldset {
@@ -134,14 +146,27 @@ fieldset {
 }
 
 /* Group first and last name side by side */
-.field-group {
+.input-group {
   display: flex;
+  flex-wrap: wrap;
   gap: 15px;
 }
 
-.field-group > label {
-  flex: 1; /* Both labels occupy the same space */
+.input-row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 15px;
 }
+
+.input-row label {
+  flex: 1;
+}
+
+.input-group label:has(input[name="streetUser"]),
+.input-group label:has(input[name="cepUser"]) {
+  flex: 3;
+}
+
 
 /* Labels and input styles */
 form label {
@@ -156,7 +181,7 @@ form input[type="email"],
 form input[type="password"] {
   padding: 12px;
   border: none;
-  border-radius: 10px;
+  border-radius: 14px;
   color: #000;
 }
 
@@ -173,7 +198,7 @@ form input[type="submit"] {
   color: #ffffff;
   font-size: 18px;
   padding: 12px 20px;
-  border-radius: 10px;
+  border-radius: 20px;
   border: none;
   cursor: pointer;
   align-self: center;
