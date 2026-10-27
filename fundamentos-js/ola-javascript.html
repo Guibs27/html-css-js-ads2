@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>JavaScript, Parte 1</h1>
+
+  <script>
+    const idade = 19
+    const nome = "Guilherme"
+
+
+    // Saída e concatenação de strings
+    console.log("Olá, mundo!")
+    console.log("Olá, " + nome + "!")
+    console.log("Você tem " + idade + " anos.")
+  
+    // Variações do console.log
+    console.warn("Isso é um aviso.")
+    console.error("Isso é um erro.")
+
+    // Objeto
+    const user = {
+      nome: "Guilherme",
+      idade: 19,
+      isAdmin: false,
+
+      endereco: {
+        rua: "Rua dos Bobos",
+        numero: 0,
+        bairro: "Centro",
+        teste: ["item1", "item2", "item3"]
+      }
+    }
+
+    // Validação de condição
+    if (user.isAdmin) { // Se isAdmin for true, entra no primeiro bloco (padrão), senão entra no else
+      console.log("Administrador");
+    } else {
+      console.log("Usuário comum")
+    }
+    console.log(user.isAdmin);
+
+    // Array
+    const frutas = ["Banana", "Maçã", "Pera"] // Acesso por indice numérico (console.log(frutas[0]) => Banana)
+  </script>
+</body>
+
+</html>
