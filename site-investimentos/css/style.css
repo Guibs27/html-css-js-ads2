@@ -86,7 +86,7 @@ nav ul li .active {
   transition: background-color 0.2s;
 }
 
-/* Main */
+/* Main Index */
 main {
   background-color: #031727; /* Alternative (#031727f4) */
   min-height: 650px;
@@ -96,6 +96,95 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  flex-direction: column;
+}
+
+.modal form {
+  background-color: #031727;
+  width: 380px;
+  height: 520px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+}
+
+.add-button {
+  background-color: #eb7426;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 12px 20px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  align-self: center;
+  width: 100%;
+  max-width: 245px;
+  transition: background-color 0.2s;
+}
+
+
+/* Stock cards */
+.stockCard {
+  background-color: #000000;
+  border-radius: 14px;
+  margin: 20px 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  height: 110px;
+}
+
+.up {
+  color: #117911;
+}
+
+.down {
+  color: #ff0000;
+}
+
+.stockValue {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.totalValue {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.stockCard header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stockCard header h2 {
+  margin: 0;
+}
+
+.stockCard footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+
+.stockCard footer div {
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -167,7 +256,8 @@ form label {
 
 form input[type="text"],
 form input[type="email"],
-form input[type="password"] {
+form input[type="password"],
+form input[type="number"] {
   padding: 12px;
   border: none;
   border-radius: 14px;
@@ -181,24 +271,10 @@ form input[type="password"] {
   cursor: pointer;
 }
 
-/* Submit button */
-form input[type="submit"] {
-  background-color: #eb7426;
-  color: #ffffff;
-  font-size: 18px;
-  padding: 12px 20px;
-  border-radius: 20px;
-  border: none;
-  cursor: pointer;
-  align-self: center;
-  width: 100%;
-  max-width: 300px;
-  transition: background-color 0.2s;
-}
-
-form input[type="submit"]:hover {
+.add-button:hover {
   background-color: #cc5200;
 }
+
 
 /* Footer */
 footer {
