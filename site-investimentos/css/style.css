@@ -106,7 +106,7 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   flex-direction: column;
 }
 
@@ -136,15 +136,22 @@ main {
 
 
 /* Stock cards */
+.stockList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 20px 20px 20px 0;
+}
+
 .stockCard {
-  background-color: #000000;
+  background-color: #010c15;
   border-radius: 14px;
-  margin: 20px 10px;
   padding: 20px;
   display: flex;
-  flex-direction: column;
-  width: 220px;
-  height: 110px;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  width: 200px;
+  height: 120px;
 }
 
 .up {
@@ -160,29 +167,20 @@ main {
   font-weight: bold;
 }
 
-.totalValue {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.stockCard header {
+.stockCard .stockHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.stockCard header h2 {
-  margin: 0;
-}
-
-.stockCard footer {
+.stockCard .stockDetails {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 50px;
 }
 
-.stockCard footer div {
+.stockCard .stockDetails div {
   display: flex;
   flex-direction: column;
 }

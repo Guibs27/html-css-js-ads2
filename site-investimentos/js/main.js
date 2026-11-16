@@ -1,10 +1,5 @@
 // alert("Olá mundo! Carreguei o arquivo main.js com sucesso!");
 
-// openModal = (modalId) => {
-//   const modal = document.getElementById(modalId);
-//   modal.style.display = "flex";
-// }
-
 function openModal(idModal) {
   const modal = document.getElementById("addStockModal");
   modal.style.display = "flex";

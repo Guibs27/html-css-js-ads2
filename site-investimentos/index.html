@@ -29,26 +29,70 @@
   <main>
     <div class="wrapper">
       <h1>Bem-vindo ao QuantIF.</h1>
-      <div id="stockList">
+
+      <div class="stockList">
         <div class="stockCard">
-          <header>
+          <div class="stockHeader">
             <div>
               <h2>APPL</h2>
               <span>Apple Inc.</span>
             </div>
-            <span class="stockValue up">USD 100.00</span>
-          </header>
+            <div>
+              <span class="stockValue up">USD 100.00</span>
+            </div>
+          </div>
+
           <div class="stockDetails">
             <span><b>5</b> ações</span>
             <div>
               <span>Total</span>
-              <span class="totalValue">USD 500.00</span>
+              <span class="stockValue">USD 500.00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="stockCard">
+          <div class="stockHeader">
+            <div>
+              <h2>APPL</h2>
+              <span>Apple Inc.</span>
+            </div>
+            <div>
+              <span class="stockValue up">USD 100.00</span>
+            </div>
+          </div>
+
+          <div class="stockDetails">
+            <span><b>5</b> ações</span>
+            <div>
+              <span>Total</span>
+              <span class="stockValue">USD 500.00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="stockCard">
+          <div class="stockHeader">
+            <div>
+              <h2>APPL</h2>
+              <span>Apple Inc.</span>
+            </div>
+            <div>
+              <span class="stockValue up">USD 100.00</span>
+            </div>
+          </div>
+
+          <div class="stockDetails">
+            <span><b>5</b> ações</span>
+            <div>
+              <span>Total</span>
+              <span class="stockValue">USD 500.00</span>
             </div>
           </div>
         </div>
       </div>
 
-      <button class="add-button" style="margin: 30px 10px;" onclick="openModal('addStockModal')">Add Stock</button>
+      <button class="add-button" onclick="openModal('addStockModal')">Add Stock</button>
       <div class="center-content modal" id="addStockModal">
         <form action="#" method="POST" id="addStockForm">
           <h2>Adicionar Ação</h2>
