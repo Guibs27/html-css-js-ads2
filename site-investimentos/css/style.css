@@ -131,7 +131,7 @@ main {
   cursor: pointer;
   align-self: center;
   width: 100%;
-  max-width: 240px;
+  max-width: 260px;
   transition: background-color 0.2s;
 }
 
@@ -192,42 +192,55 @@ main {
   font-weight: bold;
 }
 
-.stockCard .stockHeader {
+.stockHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.stockCard .stockDetails {
+.stockDetails {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 50px;
 }
 
-.stockCard .stockDetails div {
+.stockDetails div {
   display: flex;
   flex-direction: column;
 }
 
 
 /* Table */
-table, th, td {
-  border-color: #ffffff;
-  border-width: 1px;
-  border-style: solid;
-  border-collapse: collapse;
+table {
+  border: 1px solid #ffffff;
+  border-collapse: separate;
+  border-spacing: 0px;
+  border-radius: 14px;
+  overflow: hidden;
   margin: 10px 0;
 }
 
-td, th {
+th, td {
   padding: 10px;
+  border-bottom: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+}
+
+th:last-child,
+td:last-child {
+  border-right: none;
+}
+
+tr:last-child td,
+tr:last-child th {
+  border-bottom: none;
 }
 
 /* Table links */
 table a {
   color: #ffffff;
-  text-decoration: none;
+  /* text-decoration: none; */
 }
 
 table a:hover {

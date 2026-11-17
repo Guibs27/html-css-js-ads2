@@ -35,14 +35,14 @@ function addStock(event) {
           <span>${stock.name}</span>
         </div>
         <div>
-          <span class="stockValue up">USD ${stock.value.toFixed(2)}</span>
+          <span class="stockValue up">US$ ${stock.value.toFixed(2)}</span>
         </div>
       </div>
       <div class="stockDetails">
         <span><b>${stock.quantity}</b> ações</span>
         <div>
           <span>Total</span>
-          <span class="stockValue">USD ${(stock.value * stock.quantity).toFixed(2)}</span>
+          <span class="stockValue">US$ ${(stock.value * stock.quantity).toFixed(2)}</span>
         </div>
       </div>
       <div class="stockActions">
@@ -63,7 +63,7 @@ function loadEditForm(buttonEdit) {
   const stock = {
     ticker: stockCard.querySelector('h2').textContent,
     name: stockCard.querySelector('.stockHeader span').textContent,
-    value: parseFloat(stockCard.querySelector('.stockValue').textContent.replace('USD ', '')),
+    value: parseFloat(stockCard.querySelector('.stockValue').textContent.replace('US$ ', '')),
     quantity: parseInt(stockCard.querySelector('.stockDetails b').textContent)
   };
 
@@ -85,9 +85,9 @@ function saveEdit(event) {
 
   stockBeingEdited.querySelector('h2').textContent = form.stockTicker.value.toUpperCase();
   stockBeingEdited.querySelector('.stockHeader span').textContent = form.stockName.value;
-  stockBeingEdited.querySelector('.stockHeader .stockValue').textContent = `USD ${value.toFixed(2)}`;
+  stockBeingEdited.querySelector('.stockHeader .stockValue').textContent = `US$ ${value.toFixed(2)}`;
   stockBeingEdited.querySelector('.stockDetails b').textContent = quantity;
-  stockBeingEdited.querySelector('.stockDetails .stockValue').textContent = `USD ${(value * quantity).toFixed(2)}`;
+  stockBeingEdited.querySelector('.stockDetails .stockValue').textContent = `US$ ${(value * quantity).toFixed(2)}`;
 
   closeModal('editStockModal');
 }
