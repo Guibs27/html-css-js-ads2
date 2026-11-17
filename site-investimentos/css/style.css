@@ -86,7 +86,7 @@ nav ul li .active {
   transition: background-color 0.2s;
 }
 
-/* Main Index */
+/* Main */
 main {
   background-color: #031727; /* Alternative (#031727f4) */
   min-height: 650px;
@@ -98,14 +98,15 @@ main {
   align-items: center;
 }
 
+
 /* Modal */
 .modal {
   display: none;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
   background-color: rgba(0, 0, 0, 0.6);
   flex-direction: column;
 }
@@ -120,7 +121,7 @@ main {
   border-radius: 16px;
 }
 
-.add-button {
+.button {
   background-color: #eb7426;
   color: #ffffff;
   font-size: 18px;
@@ -130,7 +131,7 @@ main {
   cursor: pointer;
   align-self: center;
   width: 100%;
-  max-width: 245px;
+  max-width: 240px;
   transition: background-color 0.2s;
 }
 
@@ -140,18 +141,42 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  margin: 20px 20px 20px 0;
+  margin: 20px 20px 20px 0;   
 }
 
 .stockCard {
-  background-color: #010c15;
-  border-radius: 14px;
-  padding: 20px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
-  width: 200px;
+  background-color: #010c15;
+  border-radius: 14px;
+  padding: 20px;
+  position: relative;
+  width: 220px;
   height: 120px;
+}
+
+.stockActions {
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 14px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.stockCard:hover .stockActions {
+  visibility: visible;
+}
+
+.stockActions button {
+  width: 90px;
 }
 
 .up {
@@ -269,7 +294,7 @@ form input[type="number"] {
   cursor: pointer;
 }
 
-.add-button:hover {
+.button:hover {
   background-color: #cc5200;
 }
 

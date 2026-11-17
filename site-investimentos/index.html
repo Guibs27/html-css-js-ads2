@@ -30,11 +30,11 @@
     <div class="wrapper">
       <h1>Bem-vindo ao QuantIF.</h1>
 
-      <div class="stockList">
+      <div class="stockList" id="stockList">
         <div class="stockCard">
           <div class="stockHeader">
             <div>
-              <h2>APPL</h2>
+              <h2>AAPL</h2>
               <span>Apple Inc.</span>
             </div>
             <div>
@@ -49,54 +49,20 @@
               <span class="stockValue">USD 500.00</span>
             </div>
           </div>
-        </div>
 
-        <div class="stockCard">
-          <div class="stockHeader">
-            <div>
-              <h2>APPL</h2>
-              <span>Apple Inc.</span>
-            </div>
-            <div>
-              <span class="stockValue up">USD 100.00</span>
-            </div>
-          </div>
-
-          <div class="stockDetails">
-            <span><b>5</b> ações</span>
-            <div>
-              <span>Total</span>
-              <span class="stockValue">USD 500.00</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="stockCard">
-          <div class="stockHeader">
-            <div>
-              <h2>APPL</h2>
-              <span>Apple Inc.</span>
-            </div>
-            <div>
-              <span class="stockValue up">USD 100.00</span>
-            </div>
-          </div>
-
-          <div class="stockDetails">
-            <span><b>5</b> ações</span>
-            <div>
-              <span>Total</span>
-              <span class="stockValue">USD 500.00</span>
-            </div>
+          <div class="stockActions">
+            <button class="button" onclick="loadEditForm(this)">Editar</button>
+            <button class="button" onclick="removeStock(this)">Excluir</button>
           </div>
         </div>
       </div>
 
-      <button class="add-button" onclick="openModal('addStockModal')">Add Stock</button>
+      <button class="button" onclick="openModal('addStockModal')">Adicionar Ação</button>
+
       <div class="center-content modal" id="addStockModal">
-        <form action="#" method="POST" id="addStockForm">
+        <form action="#" method="POST" id="addStockForm" onSubmit="addStock(event)">
           <h2>Adicionar Ação</h2>
-        
+
           <label for="stockTicker">Código da Ação:</label>
           <input type="text" id="stockTicker" name="stockTicker" placeholder="Ex: AAPL" required>
           <label for="stockName">Nome da Ação:</label>
@@ -106,8 +72,26 @@
           <label for="stockQuantity">Quantidade:</label>
           <input type="number" id="stockQuantity" name="stockQuantity" placeholder="Ex: 100">
 
-          <input class="add-button" type="submit" value="Adicionar Ação">
-          <button class="add-button" onclick="closeModal('addStockModal')">Fechar</button>
+          <input class="button" type="submit" value="Adicionar Ação">
+          <button class="button" type="button" onclick="closeModal('addStockModal')">Fechar</button>
+        </form>
+      </div>
+
+      <div class="center-content modal" id="editStockModal">
+        <form action="#" method="POST" id="editStockForm" onSubmit="saveEdit(event)">
+          <h2>Editar Ação</h2>
+
+          <label for="editStockTicker">Código da Ação:</label>
+          <input type="text" id="editStockTicker" name="stockTicker" placeholder="Ex: AAPL" required>
+          <label for="editStockName">Nome da Ação:</label>
+          <input type="text" id="editStockName" name="stockName" placeholder="Ex: Apple Inc.">
+          <label for="editStockValue">Preço da Ação:</label>
+          <input type="number" id="editStockValue" name="stockValue" placeholder="Ex: 150.00" step="0.01">
+          <label for="editStockQuantity">Quantidade:</label>
+          <input type="number" id="editStockQuantity" name="stockQuantity" placeholder="Ex: 100">
+
+          <input class="button" type="submit" value="Salvar Alterações">
+          <button class="button" type="button" onclick="closeModal('editStockModal')">Fechar</button>
         </form>
       </div>
     </div>
@@ -117,7 +101,8 @@
     <div class="wrapper">
     </div>
   </footer>
+
+  <script src="./js/main.js"></script>
 </body>
 
-<script src="./js/main.js"></script>
 </html>
