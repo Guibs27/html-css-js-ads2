@@ -45,7 +45,7 @@ function addStock(event) {
           <span class="stockValue">US$ ${(stock.value * stock.quantity).toFixed(2)}</span>
         </div>
       </div>
-      <div class="stockActions">
+      <div class="stockActions">  
         <button class="button" onclick="loadEditForm(this)">Editar</button>
         <button class="button" onclick="removeStock(this)">Excluir</button>
       </div>

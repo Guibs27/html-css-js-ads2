@@ -38,7 +38,7 @@
               <span>Apple Inc.</span>
             </div>
             <div>
-              <span class="stockValue up">US$ 350,78</span>
+              <span class="stockValue up">US$ 350.78</span>
             </div>
           </div>
 
@@ -46,13 +46,13 @@
             <span><b>5</b> ações</span>
             <div>
               <span>Total</span>
-              <span class="stockValue">US$ 1,753.90</span>
+              <span class="stockValue">US$ 1.753.90</span>
             </div>
           </div>
 
           <div class="stockActions">
-            <button class="button" onclick="loadEditForm(this)">Editar</button>
-            <button class="button" onclick="removeStock(this)">Excluir</button>
+            <button class="add-button" onclick="loadEditForm(this)">Editar</button>
+            <button class="add-button" onclick="removeStock(this)">Excluir</button>
           </div>
         </div>
 
@@ -63,7 +63,7 @@
               <span>Microsoft Corp.</span>
             </div>
             <div>
-              <span class="stockValue up">US$ 523,00</span>
+              <span class="stockValue up">US$ 523.00</span>
             </div>
           </div>
 
@@ -71,18 +71,20 @@
             <span><b>3</b> ações</span>
             <div>
               <span>Total</span>
-              <span class="stockValue">US$ 1,052.34</span>
+              <span class="stockValue">US$ 1.569.00</span>
             </div>
           </div>
 
           <div class="stockActions">
-            <button class="button" onclick="loadEditForm(this)">Editar</button>
-            <button class="button" onclick="removeStock(this)">Excluir</button>
+            <button class="add-button" onclick="loadEditForm(this)">Editar</button>
+            <button class="add-button" onclick="removeStock(this)">Excluir</button>
           </div>
         </div>
       </div>
 
-      <button class="button" onclick="openModal('addStockModal')">Adicionar Ação</button>
+      <button class="fab-button" onclick="openModal('addStockModal')">
+        <img src="./img/plus-circle.svg" alt="Adicionar Ação">
+      </button>
 
       <div class="center-content modal" id="addStockModal">
         <form action="#" method="POST" id="addStockForm" onSubmit="addStock(event)">
@@ -97,8 +99,8 @@
           <label for="stockQuantity">Quantidade:</label>
           <input type="number" id="stockQuantity" name="stockQuantity" placeholder="Ex: 100">
 
-          <input class="button" type="submit" value="Confirmar">
-          <button class="button" type="button" onclick="closeModal('addStockModal')">Fechar</button>
+          <input class="add-button" type="submit" value="Confirmar">
+          <button class="add-button" type="button" onclick="closeModal('addStockModal')">Fechar</button>
         </form>
       </div>
 
@@ -115,10 +117,11 @@
           <label for="editStockQuantity">Quantidade:</label>
           <input type="number" id="editStockQuantity" name="stockQuantity" placeholder="Ex: 100">
 
-          <input class="button" type="submit" value="Salvar Alterações">
-          <button class="button" type="button" onclick="closeModal('editStockModal')">Fechar</button>
+          <input class="add-button" type="submit" value="Salvar Alterações">
+          <button class="add-button" type="button" onclick="closeModal('editStockModal')">Fechar</button>
         </form>
       </div>
+
     </div>
   </main>
 
